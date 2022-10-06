@@ -2,5 +2,5 @@ google-cloud-speech
 
 google-cloud-storage
 google-cloud-bigquery
-"fastapi[all]"
+fastapi
 google-cloud-texttospeech
