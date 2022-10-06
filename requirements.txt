@@ -1,5 +1,5 @@
 google-cloud-speech
-
+gunicorn
 google-cloud-storage
 google-cloud-bigquery
 fastapi
