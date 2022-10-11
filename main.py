@@ -36,7 +36,22 @@ async def upload( text: str = Form()):
     res = functionmain(text)    
     
    
-    return {"message": res}
+    return  res
+@app.post("/upload")
+def upload(file: UploadFile = File(...)):
+     try:
+        contents = file.file.read()
+        with open(file.filename, 'wb') as f:
+            f.write(contents)
+     finally:
+        file.file.close() 
+
+     res = functionmain(file.filename)    
+    
+   
+     return  res
+
+
 
 
 
